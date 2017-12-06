@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Create extends CI_Controller {
+class Main extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -29,7 +29,7 @@ class Create extends CI_Controller {
 
         $this->load->view('head', $data);
 	    $this->load->view('layout');
-		$this->load->view('/quiz/index');
+		$this->load->view('/main/index');
 		$this->load->view('footer');
     }
 

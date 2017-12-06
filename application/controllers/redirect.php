@@ -20,7 +20,7 @@ class Redirect extends CI_Controller {
 	 */
 	public function index()
 	{
-        redirect('/quiz/create/', 'refresh');
+        redirect('main', 'refresh');
 		//$this->load->view('welcome_message');
     }
     
