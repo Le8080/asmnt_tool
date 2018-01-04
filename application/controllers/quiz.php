@@ -22,20 +22,29 @@ class Quiz extends CI_Controller {
 	{
         $data['page_title'] = 'Quiz Maker';    
         $data['page_css'] = 'quiz';
-    
+		$g = array();	$g['test'] = 'test';
         #material_design Components
         $data['material_com'] = array('card','form-field');
-        
-
+		$uq =  $this->QL->get_user_quiz(0);
+		
+		//Load view
         $this->load->view('head', $data);
-	    $this->load->view('layout');
-		$this->load->view('/quiz/index');
+		$this->load->view('layout');
+		//load create new quiz
+		if(empty($uq->result_array)){
+			$this->create_quiz();
+		}else{
+			$this->load->view('/quiz/index',$g);
+		}
+	
 		$this->load->view('footer');
-    }
+	}
+		
+	public function create_quiz(){
+		$this->load->view('/quiz/create');
+	}
+	public function display_quiz(){
 
-    public function step1()
-    {
-        
-    }
+	}
     
 }

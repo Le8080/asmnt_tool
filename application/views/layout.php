@@ -19,7 +19,7 @@
           <!-- Navigation -->
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="<?php echo base_url().'/quiz'; ?>">Quiz</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="<?php echo base_url().'index.php/quiz'; ?>">Quiz</a>
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
